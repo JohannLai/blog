@@ -1,0 +1,23 @@
+(node:16976) [DEP0061] DeprecationWarning: fs.SyncWriteStream is deprecated.
+INFO  Start processing
+INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
+INFO  Catch you later
+(node:18205) [DEP0061] DeprecationWarning: fs.SyncWriteStream is deprecated.
+INFO  Start processing
+INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
+INFO  See you again
+(node:20842) [DEP0061] DeprecationWarning: fs.SyncWriteStream is deprecated.
+INFO  Start processing
+(node:20866) [DEP0061] DeprecationWarning: fs.SyncWriteStream is deprecated.
+INFO  Start processing
+INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
+FATAL Port 4000 has been used. Try other port instead.
+FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
+Error: listen EADDRINUSE 0.0.0.0:4000
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at Server.setupListenHandle [as _listen2] (net.js:1351:14)
+    at listenInCluster (net.js:1392:12)
+    at doListen (net.js:1501:7)
+    at _combinedTickCallback (internal/process/next_tick.js:141:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
