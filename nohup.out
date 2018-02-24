@@ -21,3 +21,40 @@ Error: listen EADDRINUSE 0.0.0.0:4000
     at doListen (net.js:1501:7)
     at _combinedTickCallback (internal/process/next_tick.js:141:11)
     at process._tickCallback (internal/process/next_tick.js:180:9)
+INFO  Good bye
+(node:21851) [DEP0061] DeprecationWarning: fs.SyncWriteStream is deprecated.
+INFO  Start processing
+INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
+res { Error: spawn ./deploy ENOENT
+    at _errnoException (util.js:1022:11)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:190:19)
+    at onErrorNT (internal/child_process.js:372:16)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  code: 'ENOENT',
+  errno: 'ENOENT',
+  syscall: 'spawn ./deploy',
+  path: './deploy',
+  spawnargs: [ 'deploy' ] } { stdout: '', stderr: '' }
+res { Error: spawn ./deploy ENOENT
+    at _errnoException (util.js:1022:11)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:190:19)
+    at onErrorNT (internal/child_process.js:372:16)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  code: 'ENOENT',
+  errno: 'ENOENT',
+  syscall: 'spawn ./deploy',
+  path: './deploy',
+  spawnargs: [ '`deploy`' ] } { stdout: '', stderr: '' }
+res { Error: spawn ./deploy ENOENT
+    at _errnoException (util.js:1022:11)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:190:19)
+    at onErrorNT (internal/child_process.js:372:16)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  code: 'ENOENT',
+  errno: 'ENOENT',
+  syscall: 'spawn ./deploy',
+  path: './deploy',
+  spawnargs: [ '' ] } { stdout: '', stderr: '' }

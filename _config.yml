@@ -129,6 +129,7 @@ admin:
   username: johannlai
   password_hash: $2a$10$I.CzuCVYNAs4LaKkB0DGQ.KV296xcb6CwHPvOBjKkcnBvt6bifDp.
   secret: helloworld!
+  deployCommand: './deploy'
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
