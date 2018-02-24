@@ -1,6 +1,6 @@
-title: 关于我 & 留言板
-date: 2016-03-23 19:28
+title: 关于我
 fancybox: false
+date: 2016-03-23 19:28:00
 ---
 
 <style type="text/css">
