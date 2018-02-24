@@ -1,12 +1,14 @@
 title: (译)学习React之前你应该知道的事
-date: 2017-03-14 7：00：06
 categories:
-- 技术
-- 翻译
+  - 技术
+  - 翻译
 tags:
-- React
+  - React
+author: johannlai
+date: 2018-02-22 20:31:00
 ---
 这是学习任何一门技术的坚实基础，不仅仅是React
+
 <Excerpt in index | 首页摘要> 
 + <!-- more -->
 <The rest of contents | 余下全文>
@@ -51,6 +53,8 @@ Mozilla开发者网站（[MDN](https://developer.mozilla.org/en-US/)，是一个
 #### 网站和浏览器
 - HTTP 请求
 - 浏览器渲染 ——[the pixel pipeline graph](https://developers.google.com/web/fundamentals/performance/rendering/)
+
+
 #### CSS
 - CSS命名规范 例如[BEM](http://getbem.com/naming/)，[Suit](https://suitcss.github.io/)
 - [使用flexbox布局](http://cssreference.io/)
@@ -93,8 +97,3 @@ Mozilla开发者网站（[MDN](https://developer.mozilla.org/en-US/)，是一个
 > “阅读，实践，失败，重来。继续做直到你弄懂为止”
 
 **这是学习任何一门技术的坚实基础，不仅仅是React**
-
-
-
-
-
