@@ -1,4 +1,15 @@
 title: localhost----从坑谈起
+categories:
+  - 技术
+  - 分享
+  - 笔记
+tags:
+  - locahost
+  - Django
+  - laravel
+date: NaN-NaN-NaN NaN:NaN:NaN
+---
+-从坑谈起
 date: 2017-02-26 1：10：01
 categories:
 - 技术
@@ -90,7 +101,7 @@ tcp6       0      0 ::1:8000                :::*                    LISTEN      
 **不可以通过127.0.0.1**访问！
 
 
-我马上打卡`WIKI` ，浏览了一下[localhost](https://en.wikipedia.org/wiki/Localhost)的解释，reason如下：
+我马上打开 `WIKI` ，浏览了一下[localhost](https://en.wikipedia.org/wiki/Localhost)的解释，reason如下：
 操作系统的`hosts`文件中的`localhost`解析一些ip：
 ```
 127.0.0.1    localhost
@@ -104,13 +115,3 @@ tcp6       0      0 ::1:8000                :::*                    LISTEN      
 ```
  johann@johann-Inspiron $ php artisan serve --host=127.0.0.1
 ```
-
-
-
-
-
-
-
-
-
-
