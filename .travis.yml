@@ -11,7 +11,7 @@ install:
 
 script:
   - hexo clean  #清除
-  - hexo g h
+  - hexo g
 
 after_script:
   - git clone https://${GIT_PAGE_REF} .deploy_git  # GH_REF是最下面配置的仓库地址
