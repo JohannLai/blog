@@ -1,0 +1,36 @@
+cache:
+    apt: true
+    directories:
+        - node_modules # 缓存不经常更改的内容
+
+before_install:
+    - export TZ='Asia/Shanghai' # 更改时区
+
+install:
+  - npm install  #安装hexo及插件
+
+script:
+  - hexo clean  #清除
+  - hexo g h
+
+after_script:
+  - git clone https://${GIT_PAGE_REF} .deploy_git  # GH_REF是最下面配置的仓库地址
+  - cd .deploy_git
+  - git checkout master
+  - cd ../
+  - mv .deploy_git/.git/ ./public/   # 这一步之前的操作是为了保留master分支的提交记录，不然每次git init的话只有1条commit
+  - cd ./public
+  - git config user.name "mtianyan"  #修改name
+  - git config user.email "1147727180@qq.com"  #修改email
+  - git add .
+  - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"  # 提交记录包含时间 跟上面更改时区配合
+  - git push --force --quiet "https://${GH_Token}@${GIT_PAGE_REF}" master:master
+
+branches:
+  only:
+    - master
+
+env:
+ global:
+   - GIT_PAGE_REF: github.com/JohannLai/johannlai.github.io.git
+   - secure: "h8aTA+lNUxH5kjV6olYUgAY7c7sKt8yC2w75aqirjbAHuBG6hQuaczMtRldBNaZEbZ7Ft7C8R/X3W2O6DmainWm9dHy0Wc3C2CsDKpJpjAUeND+pZs8oso1dQxpeD6ZjhmjHp8a690OSRtGPQiPsTGFcPGqqOM9Wa0S+Z+K1z97+PwUWaMYbIIu8Er58wzvgL0H6aYhm6CTfTW2HO9gBzsCDUsE+KUocBeZSqwD/qhGYbI3THpZSO05iLhwXMf9zU4GYyzeGTfV2n7LH7Q9bwksGPsrJ51CvITy+1s/wPm1Vo/jAsVWll/eKwd453UnxdV0lTEmOvTlf6waArugIYvNhrGXneSdZLZlZaF9UKjvcnWhIcZc1lmBzjyxiJpIov+6YY2i0KAy1nXtNoCCgJq8iB5uSqnwDc1coxW1MZKPfiCoqBVloiukrsNUblYVR7JjEDI+jsAPo0TV/dMbxrL2rHdF5oE2yOnYLJfTYIBxBuWKT3eSzFBUmxC5UQGbWJd0+T9JG96SIO40a2vt8s2duzwaQ5Jnf0SbVRJqJY/wa1gLh5YGvkMdqhyS4Q3jGM+LpKmHf+UFG6SipVH9mKcIHohopsVEsfnGR4pma8waeGuLZPhUjI2U/RHCR2LtHUNq8vQDDu763L4ZGtt0imKHRwIUZ903i3GdMOX5w0Qk="
